@@ -2,59 +2,184 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Una Sorpresa para Ti 💌</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <script src="script.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palo de Acacia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --verde: #4e342e;
+      --verde-oscuro: #3e2723;
+      --fondo: #fff8e1;
+      --blanco: #ffffff;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--fondo);
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .contenedor {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--verde);
+      margin-bottom: 5px;
+    }
+
+    .subtitulo {
+      text-align: center;
+      color: #ff8f00;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 3px solid #ffe082;
+      filter: brightness(0.97);
+    }
+
+    .bloque {
+      background-color: var(--blanco);
+      padding: 18px 20px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      opacity: 0;
+    }
+
+    .bloque.visible {
+      animation: aparecer 0.7s ease forwards;
+    }
+
+    @keyframes aparecer {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--verde-oscuro);
+    }
+
+    p, li {
+      line-height: 1.6;
+      margin: 0 0 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .arriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--verde);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      cursor: pointer;
+      font-size: 1.2em;
+    }
+
+    footer {
+      text-align: center;
+      color: #555;
+      padding: 20px 10px;
+      font-size: 1em;
+    }
+
+    @media (max-width: 480px) {
+      .contenedor {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      .subtitulo {
+        font-size: 1em;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="contenedor">
+    <h1>Palo de Acacia</h1>
+    <p class="subtitulo">Un árbol resistente, útil y lleno de historia natural</p>
+    
+    <img src="palo-acacia.jpg" alt="Palo de Acacia">
 
-  <header class="header">
-    <h1>Para ti, con mucho amor 💖</h1>
-    <p class="subtitulo">Una dedicatoria especial al estilo Box Treasure</p>
-  </header>
-
-  <section class="carta">
-    <h2>Querida Grethelita...</h2>
-    <p class="typewriter">
-      A veces las palabras no bastan para expresar lo importante que eres. 
-      Por eso, preparé esto con todo mi cariño, como un pequeño recordatorio 
-      de cuánto te valoro. ¡Gracias por estar en mi vida!
-    </p>
-    <p class="firma">Con amor, tu persona favorita 💌</p>
-  </section>
-
-  <section class="galeria">
-    <h2>Fotitos de Snoopy porque se que te gusta 📸</h2>
-    <div class="imagenes">
-      <img src="img/Snoopy1.jpeg" alt="Snoopy tierno" />
-      <img src="img/Snoopy2.jpeg" alt="Snoopy y corazón" />
-      <img src="img/snoopy3.jpeg" alt="Snoopy feliz" />
+    <div class="bloque">
+      <h2>Nombre científico:</h2>
+      <p><em>Acacia farnesiana</em> (también conocida como <em>Vachellia farnesiana</em>)</p>
     </div>
-  </section>
 
-  <section class="musica">
-    <h2>Una canción para ti 🎶</h2>
-    <audio controls autoplay loop>
-      <source src="audio/Laufey - Best Friend (Official Audio).mp3" type="audio/mp3" />
-    </audio>
-  </section>
-  
-    <canvas id="corazones"></canvas>
-
-  <footer class="footer">
-    <img src="img/Añadir un título (1).png" alt="Box Treasure Logo" class="logo"/>
-    <p>Box Treasure – Detalles que hablan por ti</p>
-    <div class="redes">
-      <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a> |
-      <a href="https://tiktok.com/@tuusuario" target="_blank">TikTok</a> |
-      <a href="https://wa.me/573001112233" target="_blank">WhatsApp</a>
+    <div class="bloque">
+      <h2>Información general:</h2>
+      <ul>
+        <li><strong>Familia:</strong> Fabaceae</li>
+        <li><strong>Origen:</strong> América tropical y subtropical</li>
+        <li><strong>Altura promedio:</strong> 2 a 8 metros</li>
+      </ul>
     </div>
+
+    <div class="bloque">
+      <h2>Características:</h2>
+      <p>Árbol o arbusto de crecimiento rápido, con ramas espinosas y flores amarillas muy aromáticas en forma de bolita.</p>
+    </div>
+
+    <div class="bloque">
+      <h2>Cuidados:</h2>
+      <p>Resistente al sol directo, climas secos y suelos pobres. No requiere mucho riego.</p>
+    </div>
+
+    <div class="bloque">
+      <h2>Usos:</h2>
+      <p>Utilizado en reforestación, como árbol melífero (atractivo para abejas), en perfumería por su aroma floral y en medicina tradicional.</p>
+    </div>
+  </div>
+
+  <footer>
+    Líder: Emmanuel Arrieta Morales 9-02
   </footer>
 
+  <button class="arriba" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
+  <script>
+    const bloques = document.querySelectorAll('.bloque');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
 
-
+    bloques.forEach(bloque => observer.observe(bloque));
+  </script>
 </body>
 </html>
